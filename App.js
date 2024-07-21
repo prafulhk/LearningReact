@@ -1,33 +1,37 @@
-// const heading = React.createElement("h1",{},"Hello world from React from new file");
-// const root = ReactDOM.createRoot(document.getElementById("root"))
-// root.render(heading);
-
-// const heading = React.createElement("h1",
-//                                     {
-//                                         id:"heading"
-//                                     },
-//                                     "Hello world from React from new file");
-// const root = ReactDOM.createRoot(document.getElementById("root"))
-// root.render(heading);
-
-
-{/* <div id="parent">
-    <div id="child">
-        <h1>Hi</h1>
-    </div>
-</div> */}
-
-
 
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const parent = React.createElement("div",{id:"parent"},
-                    React.createElement("div",{id:"child"},
-                        React.createElement("h1",{},"Hi")
-                    )
-);
+// const headingJSX = <h1>Hi Praful from JSX</h1>
+
+// const multilineHeading = (<h1>
+//     Multi line heading from JSX using paranthesis
+// </h1>
+// );
+
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+
+// // root.render(headingJSX);
+
+// root.render(multilineHeading);
+
+
+//react components
+// 1.Functional component: normal javascript function but returns some JSX
+
+
+const Title = () => (<h1> Title from title functional component</h1>);
+
+
+const HeadingComponent = ()=>(<h1> Functional
+    Component
+    <Title></Title>
+    {Title()}
+    <Title/>
+</h1>);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(parent)
+root.render(<HeadingComponent/>);
+
+
